@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Readex Pro', sans-serif;}
+body { background-color: #e5e5e5;}
 
 /* Common */
 .flex { display: flex;}
@@ -13,7 +14,31 @@
 .sub-heading {font: 400 20px/20px 'Readex Pro', sans-serif; text-align: center; color: #ffffff; }
 
 /* Snippets */
-.snippets  { margin-top: -110px;}
-.snippets .container { padding: 30px; border-radius: 24px; background:#fff; box-shadow: 0 2px 25px 0 rgba(0,0,0,.1);}
-.compBtns { background: #e8e8e8; display: flex; justify-content: center; flex-wrap: wrap; border-radius: 20px; padding: 20px;}
-.compBtn { font: 500 16px/16px 'Readex Pro', sans-serif; padding: 8px 16px; margin: 7px 5px; background: #fff; color: #46454a; border-radius: 50px;  border: 1px solid #fff;}
+.componentBtns  { margin-top: -110px; margin-bottom: 50px;}
+.componentBtns .container { padding: 30px; border-radius: 16px; background:#fff; box-shadow: 0 2px 25px 0 rgba(0,0,0,.1);}
+.compBtns { background: #e8e8e8; display: flex; justify-content: center; flex-wrap: wrap; border-radius: 12px; padding: 20px; }
+.compBtn { font: 500 16px/16px 'Readex Pro', sans-serif; padding: 8px 16px; margin: 7px 5px; background: #fff; color: #46454a; border-radius: 8px;  border: 1px solid #fff; cursor: pointer;}
+
+/* Main Components  */
+.compTitle { font: 600 30px/30px 'Readex Pro', sans-serif; text-align: center; padding-bottom: 10px; margin-bottom: 40px; color: #1d1d1f; position: relative;}
+.compTitle::after { content: ""; width: 200px; height: 2px; border-radius: 50px; background: #1d1d1f; position: absolute; bottom: -5px; left: 50%; transform: translate(-50%, 0);}
+
+
+/* Select Menu CSS */
+.wrapper { width: 370px; margin: 0 auto 0;}
+.select-btn, .options li { display: flex; cursor: pointer; align-items: center;}
+.select-btn { height: 65px; font-size: 22px; display: flex; padding: 0 20px; border-radius: 18px; background: #fff; align-items: center; justify-content: space-between;}
+.select-btn svg { transition: transform 0.3s linear;}
+.wrapper.active .select-btn svg { transform: rotate(-180deg);}
+.content { display: none; padding: 20px; margin-top: 15px; border-radius: 18px; background: #ffffff;}
+.wrapper.active .content { display: block;}
+.content .search { position: relative;}
+.search svg { position: absolute; line-height: 53px; left: 15px; top: 50%; transform: translate(0, -50%);}
+.search input { height: 53px; width: 100%; font-size: 17px; outline: none; border-radius: 5px; padding: 0 15px 0 43px; border: 1px solid #b3b3b3;}
+.content .options { margin-top: 10px; max-height: 250px; overflow-y: auto;}
+.options::-webkit-scrollbar { width: 7px;}
+.options::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 25px;}
+.options::-webkit-scrollbar-thumb { background: #ccc; border-radius: 25px;}
+.options li { height: 50px; border-radius: 14px; padding: 0 13px; font-size: 21px;}
+.options li:hover { background: #f2f2f2;}
+/* Select Menu CSS */
