@@ -1,2 +1,2 @@
 # ui-components
-UI Templates Library
+UI Components Library
